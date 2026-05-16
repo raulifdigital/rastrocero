@@ -1,0 +1,6 @@
+{
+  "name": "RAULIF",
+  "description": "Una aplicación educativa sobre el cuidado del medio ambiente y seguridad en entornos naturales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

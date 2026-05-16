@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-green: var(--accent-color);
+  --color-forest-green-100: var(--bg-secondary);
+  --color-earth-brown: var(--text-secondary);
+}
+
+@layer base {
+  :root {
+    --bg-primary: #f5f7f0;
+    --bg-secondary: #ffffff;
+    --text-primary: #2c3e2f;
+    --text-secondary: #4a5b3e;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --border-color: #d4d8c7;
+    --accent-color: #3d6b3d;
+    --accent-hover: #2c502c;
+    --danger: #b34e4e;
+    --success: #4b8b4b;
+    --warning: #e6a017;
+    
+    --bg-pattern: radial-gradient(#3d6b3d 0.5px, transparent 0.5px), radial-gradient(#3d6b3d 0.5px, #f5f7f0 0.5px);
+    --bg-pattern-size: 20px 20px;
+    --bg-pattern-opacity: 0.02;
+  }
+
+  .dark {
+    --bg-primary: #1a2417;
+    --bg-secondary: #24301f;
+    --text-primary: #e8f0e2;
+    --text-secondary: #c0d0b5;
+    --card-bg: #2d3a28;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --border-color: #4a5d42;
+    --accent-color: #6b9c6b;
+    --accent-hover: #5a855a;
+    
+    --bg-pattern-opacity: 0.05;
+  }
+
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--bg-pattern);
+    background-size: var(--bg-pattern-size);
+    opacity: var(--bg-pattern-opacity);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
